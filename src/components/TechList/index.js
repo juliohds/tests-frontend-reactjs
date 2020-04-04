@@ -9,6 +9,7 @@ export default function TechList() {
   return (
     <div>
       <ul data-testid="tech-list">
+        {techs.map(tech => <li key={tech}>{tech}</li>)}
         <button onClick={handleAddTech}>Adicionar</button>
       </ul>
     </div>
