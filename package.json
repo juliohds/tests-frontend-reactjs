@@ -17,6 +17,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
+    "coverage": "react-app-rewired test --coverage --watchAll=false",
     "eject": "react-scripts eject"
   },
   "jest": {
@@ -27,7 +28,12 @@
     ],
     "moduleNameMapper": {
       "ˆ~/(.*)": "<rootDir>/src/$1"
-    }
+    },
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "!src/services/api.js"
+    ],
+    "coverageDirectory": "src/__tests__/coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
